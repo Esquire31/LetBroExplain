@@ -1,103 +1,75 @@
-import Image from "next/image";
+import SiteSidebar from "@/shared/nav/sideNav"
+import ArticleCard from "@/shared/card/articleCard"
+import { Button } from "@/shared/ui"
+import Link from "next/link"
 
-export default function Home() {
+export default function HomePage() {
+  const featured = [
+    { title: "Arrays: The Swiss Army Knife of Data", href: "/articles/arrays-basics", tags: ["DSA", "Beginner"] },
+    {
+      title: "Processes vs Threads: The Roommates Analogy",
+      href: "/articles/os-processes-threads",
+      tags: ["OS", "Concepts"],
+    },
+    { title: "Indexes in DBMS: VIP Pass for Queries", href: "/articles/dbms-indexing", tags: ["DBMS", "Performance"] },
+    { title: "OSI Model Explained Like Pizza Delivery", href: "/articles/cn-osi-model", tags: ["Networks"] },
+  ]
+
+  const quickTopics = [
+    { label: "DSA", href: "/topics/dsa" },
+    { label: "System Design", href: "/topics/system-design" },
+    { label: "DBMS", href: "/topics/dbms" },
+    { label: "Operating Systems", href: "/topics/os" },
+    { label: "OOPs", href: "/topics/oops" },
+  ]
+
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <main className="mx-auto max-w-7xl px-4">
+      <div className="flex gap-6">
+        <SiteSidebar />
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
-  );
+        <section className="w-full py-8">
+          {/* Hero */}
+          <div className="mb-8 rounded-lg border bg-card p-6">
+            <h1 className="text-balance text-3xl font-semibold tracking-tight text-foreground md:text-4xl">
+              Coding explained like you’re five (but smarter).
+            </h1>
+            <p className="mt-2 text-muted-foreground">
+              Witty, clear explanations of CS, DSA, and systems — minus the academic headache.
+            </p>
+            <div className="mt-4 flex flex-wrap items-center gap-3">
+              <Link href="/topics/dsa">
+                <Button className="bg-primary text-primary-foreground">Start Learning</Button>
+              </Link>
+              <Link href="/compiler">
+                <Button variant="secondary">Try the Compiler</Button>
+              </Link>
+            </div>
+          </div>
+
+          {/* Quick topics */}
+          <div className="mb-6">
+            <h2 className="mb-3 text-lg font-medium text-foreground">Popular Topics</h2>
+            <div className="flex flex-wrap gap-2">
+              {quickTopics.map((t) => (
+                <Link key={t.href} href={t.href}>
+                  <Button variant="outline">{t.label}</Button>
+                </Link>
+              ))}
+            </div>
+          </div>
+
+          {/* Featured articles */}
+          <div className="mb-6">
+            <h2 className="mb-3 text-lg font-medium text-foreground">Featured Articles</h2>
+            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              {featured.map((f) => (
+                <ArticleCard key={f.href} title={f.title} href={f.href} tags={f.tags} />
+              ))}
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+  )
 }
