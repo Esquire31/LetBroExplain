@@ -24,7 +24,7 @@ export default function HomePage() {
   ]
 
   return (
-    <main className="mx-auto max-w-7xl px-4">
+    <main className="px-8">
       <div className="flex gap-6">
         <SiteSidebar />
 
