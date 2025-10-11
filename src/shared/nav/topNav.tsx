@@ -35,7 +35,7 @@ export default function SiteNavbar() {
                 </Link>
 
                 <div className="ml-auto flex items-center gap-2">
-                    <div className="float-right hidden gap-2 md:flex">
+                    <div className="hidden gap-2 md:flex">
                         <Input
                             value={query}
                             onChange={(e) => setQuery(e.target.value)}
