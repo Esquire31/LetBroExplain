@@ -56,7 +56,7 @@ const sidebarData = [
 
 export default function SiteSidebar() {
   return (
-    <aside className="sticky top-[72px] hidden h-[calc(100dvh-72px)] w-64 shrink-0 border-r bg-sidebar p-3 md:block">
+    <aside className="sticky top-[125px] hidden h-[calc(100dvh-125px)] w-64 shrink-0 border-r bg-card p-3 md:block">
       <Accordion type="multiple" className="space-y-2">
         {sidebarData.map((sec) => (
           <AccordionItem key={sec.title} value={sec.title}>

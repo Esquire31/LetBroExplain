@@ -1,6 +1,7 @@
 "use client"
 import { useEffect, useState } from "react"
 import { Button } from "@/shared/ui"
+import { Sun, Moon } from "lucide-react"
 
 export default function ThemeToggle() {
   const [isDark, setIsDark] = useState(false)
@@ -36,7 +37,7 @@ export default function ThemeToggle() {
       aria-label={isDark ? "Switch to light mode" : "Switch to dark mode"}
       className="text-foreground"
     >
-      {isDark ? "Light" : "Dark"}
+      {isDark ? <Sun /> : <Moon />}
     </Button>
   )
 }
