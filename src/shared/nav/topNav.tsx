@@ -41,7 +41,7 @@ export default function SiteNavbar() {
                             onChange={(e) => setQuery(e.target.value)}
                             placeholder="Search articles..."
                             aria-label="Search articles"
-                            className="w-50"
+                            className="w-50 bg-card"
                         />
                         <Button type="button" variant="default" className="bg-primary text-primary-foreground">
                             Search
