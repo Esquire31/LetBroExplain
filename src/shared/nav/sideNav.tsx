@@ -67,7 +67,7 @@ export default function SiteSidebar() {
                   <Link
                     key={it.href}
                     href={it.href}
-                    className="rounded px-2 py-1 text-sm text-foreground hover:bg-sidebar-accent"
+                    className="rounded px-2 py-1 text-sm text-foreground hover:bg-sidebar-accent cursor-pointer"
                   >
                     {it.label}
                   </Link>

@@ -41,7 +41,7 @@ export default function SiteNavbar() {
                             onChange={(e) => setQuery(e.target.value)}
                             placeholder="Search articles..."
                             aria-label="Search articles"
-                            className="w-50"
+                            className="w-50 bg-card"
                         />
                         <Button type="button" variant="default" className="bg-primary text-primary-foreground">
                             Search
@@ -53,7 +53,7 @@ export default function SiteNavbar() {
                         </Button>
                     </Link>
                     <ThemeToggle />
-                    <Link href="/admin/login" aria-label="Admin login">
+                    <Link href="/pages/admin/login" aria-label="Admin login">
                         <Button className="bg-primary text-primary-foreground">Admin</Button>
                     </Link>
                 </div>
