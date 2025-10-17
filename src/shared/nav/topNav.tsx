@@ -53,7 +53,7 @@ export default function SiteNavbar() {
                         </Button>
                     </Link>
                     <ThemeToggle />
-                    <Link href="pages/admin/login" aria-label="Admin login">
+                    <Link href="/pages/admin/login" aria-label="Admin login">
                         <Button className="bg-primary text-primary-foreground">Admin</Button>
                     </Link>
                 </div>

@@ -14,9 +14,6 @@ export default function LoginPage() {
     e.preventDefault()
     setIsLoading(true)
     
-    // Add your login logic here
-    console.log("Login attempt:", { email, password })
-    
     // Simulate API call
     setTimeout(() => {
       setIsLoading(false)
