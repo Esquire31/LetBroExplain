@@ -12,7 +12,7 @@ export default function LoginPage() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    setIsLoading(true)
+    setIsLoading(true) 
     
     // Simulate API call
     setTimeout(() => {
