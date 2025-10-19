@@ -10,7 +10,6 @@ import { Suspense } from "react"
 export const metadata: Metadata = {
   title: "LetBroExplain",
   description: "Coding explained like you’re five (but smarter).",
-  generator: "v0.app",
 }
 
 export default function RootLayout({
