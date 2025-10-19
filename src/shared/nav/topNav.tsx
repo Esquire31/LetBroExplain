@@ -47,6 +47,11 @@ export default function SiteNavbar() {
                             Search
                         </Button>
                     </div>
+                    <Link href="/pages/article" >
+                        <Button variant="ghost" className="text-foreground">
+                            Write Article
+                        </Button>
+                    </Link>
                     <Link href="/about">
                         <Button variant="ghost" className="text-foreground">
                             About
