@@ -1,5 +1,5 @@
 # 🧠 LetBroExplain  
-> *“Because sometimes you don’t need a textbook — you need a bro who gets it.”*  
+> *“Dumb it down for me kemosabe”* 
 
 ![Next.js](https://img.shields.io/badge/Next.js-15-black?logo=nextdotjs)  
 ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=white)  
@@ -18,6 +18,8 @@
 We ditch the textbook tone and explain concepts the way your coding buddy would: with memes, analogies, and jokes that *actually stick*.  
 
 💬 *Laugh first, learn second — retain forever.*  
+
+![Kemosabe meme](https://i.redd.it/kk38xlspdqu21.jpg)
 
 ---
 
