@@ -143,8 +143,3 @@ Your app will be live at 👉 `http://localhost:3000`
 Built with ❤️ by **Sanskar Srivastava**
 
 > Motto: *We make you laugh before we make you learn.*
-
----
-
-Would you like me to include a **`.env.example`** template next (for database, NextAuth, and compiler API keys)? It’ll make deployment and CI/CD setup much easier.
-```
